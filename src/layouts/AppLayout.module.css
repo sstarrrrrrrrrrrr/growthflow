@@ -1,0 +1,203 @@
+.shell {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.workspace {
+  min-width: 0;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 180ms ease;
+}
+
+.workspaceCollapsed {
+  margin-left: 76px;
+}
+
+.header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: color-mix(in srgb, var(--color-surface) 96%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search {
+  width: 210px;
+  height: 40px;
+  border-color: var(--color-border-subtle);
+  box-shadow: none;
+}
+
+.search:hover,
+.search:focus-within {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 6%, transparent);
+}
+
+.search kbd {
+  padding: 1px 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-tertiary);
+  background: var(--color-bg);
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.themeButton {
+  height: 40px;
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  box-shadow: none;
+}
+
+.themeButton:hover {
+  border-color: var(--color-border);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.themeDot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 50%, var(--color-accent) 50%);
+}
+
+.iconButton {
+  width: 36px;
+  height: 36px;
+  color: var(--color-text);
+  font-size: 18px;
+  border-radius: 9px;
+}
+
+.iconButton:hover {
+  background: var(--color-bg) !important;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.userButton:hover {
+  color: var(--color-primary);
+}
+
+.content {
+  padding: 24px 32px 36px;
+}
+
+.mobileMenuButton {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .workspace {
+    margin-left: 0;
+  }
+
+  .header {
+    height: 68px;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .mobileMenuButton {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .greeting {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .header h1 {
+    overflow: hidden;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header p {
+    font-size: 10px;
+  }
+
+  .headerActions {
+    gap: 4px;
+  }
+
+  .themeButton {
+    width: 36px;
+    padding-inline: 0;
+    font-size: 0;
+  }
+
+  .themeDot {
+    margin: 0;
+  }
+
+  .userButton span,
+  .userButton > :last-child {
+    display: none;
+  }
+
+  .content {
+    padding: 18px 14px 28px;
+  }
+}
+
+@media (max-width: 460px) {
+  .iconButton,
+  .headerActions :global(.ant-badge) {
+    display: none;
+  }
+
+  .userButton :global(.ant-avatar) {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+}

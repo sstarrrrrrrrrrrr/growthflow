@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  min-width: 0;
+  min-height: 142px;
+  align-items: center;
+  gap: 17px;
+  padding: 22px 20px;
+  border: 1px solid color-mix(in srgb, var(--color-border) 88%, transparent);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--color-border) 72%, var(--color-text-tertiary));
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 3%),
+    0 12px 30px rgb(15 23 42 / 5%);
+  transform: translateY(-1px);
+}
+
+.icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: transform 180ms ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.03);
+}
+
+.primary {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.green {
+  color: #16b77a;
+  background: var(--color-green-soft);
+}
+
+.blue {
+  color: #1677ff;
+  background: var(--color-blue-soft);
+}
+
+.yellow {
+  color: #f0a500;
+  background: var(--color-yellow-soft);
+}
+
+.body {
+  min-width: 0;
+  flex: 1;
+}
+
+.body > p {
+  margin: 0 0 3px;
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.value {
+  color: var(--color-text);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.value span {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.body small {
+  display: block;
+  margin-top: 9px;
+  overflow: hidden;
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.body :global(.ant-progress) {
+  display: block;
+  margin-top: 8px;
+  line-height: 1;
+}

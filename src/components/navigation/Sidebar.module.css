@@ -1,0 +1,217 @@
+.sidebar {
+  position: fixed;
+  z-index: 30;
+  inset: 0 auto 0 0;
+  display: flex;
+  width: var(--sidebar-width);
+  flex-direction: column;
+  padding: 0 20px 24px;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: width 180ms ease, padding 180ms ease, transform 180ms ease;
+}
+
+.backdrop {
+  display: none;
+}
+
+.sidebar.collapsed {
+  width: 76px;
+  padding-inline: 12px;
+}
+
+.collapsed .brand {
+  justify-content: center;
+}
+
+.collapsed .brand strong,
+.collapsed .brand button,
+.collapsed .navigation p,
+.collapsed .navigation a span,
+.collapsed .streakCard {
+  display: none;
+}
+
+.collapsed .navigation a {
+  justify-content: center;
+  padding: 0;
+  font-size: 17px;
+}
+
+.brand {
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  gap: 11px;
+}
+
+.brand strong {
+  flex: 1;
+  color: var(--color-text);
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+
+.brand button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.brand button:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.logo {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 9px;
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  transform: rotate(-8deg);
+}
+
+.navigation {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.navigation p {
+  margin: 14px 8px 9px;
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.navigation .settingsLabel {
+  margin-top: 32px;
+}
+
+.navigation a {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 5px;
+  padding: 0 13px;
+  border-radius: 9px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.navigation a:hover {
+  color: var(--color-text);
+  background: var(--color-bg);
+  transform: translateX(1px);
+}
+
+.navigation a.active {
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+  font-weight: 600;
+}
+
+.streakCard {
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  background:
+    linear-gradient(145deg, transparent 65%, color-mix(in srgb, var(--color-accent) 18%, transparent)),
+    var(--color-surface);
+  box-shadow: 0 8px 22px rgb(15 23 42 / 3%);
+}
+
+.streakCard div {
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.streakCard div span {
+  color: var(--color-primary);
+}
+
+.streakCard strong {
+  display: block;
+  margin: 8px 0 4px;
+  color: var(--color-text);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.streakCard small {
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.streakCard p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: min(280px, 84vw);
+    padding-inline: 20px;
+    box-shadow: 18px 0 50px rgb(15 23 42 / 14%);
+    transform: translateX(-105%);
+  }
+
+  .sidebar.mobileOpen {
+    transform: translateX(0);
+  }
+
+  .sidebar.collapsed {
+    width: min(280px, 84vw);
+    padding-inline: 20px;
+  }
+
+  .collapsed .brand {
+    justify-content: initial;
+  }
+
+  .collapsed .brand strong,
+  .collapsed .brand button,
+  .collapsed .navigation p,
+  .collapsed .navigation a span,
+  .collapsed .streakCard {
+    display: initial;
+  }
+
+  .collapsed .navigation a {
+    justify-content: flex-start;
+    padding: 0 13px;
+    font-size: 14px;
+  }
+
+  .backdrop {
+    position: fixed;
+    z-index: 29;
+    inset: 0;
+    display: block;
+    visibility: hidden;
+    border: 0;
+    opacity: 0;
+    background: rgb(15 23 42 / 38%);
+    transition: opacity 180ms ease, visibility 180ms ease;
+  }
+
+  .backdropVisible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,64 @@
+.card {
+  padding: 24px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.heading > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-size: 19px;
+}
+
+.heading h2 {
+  margin: 0 0 4px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.heading p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.card :global(.ant-input) {
+  padding: 16px;
+  border-color: var(--color-border-subtle);
+  border-radius: 10px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-size: 14px;
+  line-height: 1.75;
+  resize: none;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tips span {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--color-text-tertiary);
+  background: var(--color-bg);
+  font-size: 11px;
+}

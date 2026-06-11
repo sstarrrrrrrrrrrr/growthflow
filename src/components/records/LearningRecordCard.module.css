@@ -1,0 +1,146 @@
+.card {
+  padding: 18px 20px 16px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-border));
+  box-shadow: 0 12px 30px rgb(15 23 42 / 5%);
+  transform: translateY(-1px);
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.meta > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.category {
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.study {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.project {
+  color: #1677ff;
+  background: var(--color-blue-soft);
+}
+
+.algorithm {
+  color: #d99400;
+  background: var(--color-yellow-soft);
+}
+
+.english {
+  color: #ef3f83;
+  background: var(--color-pink-soft);
+}
+
+.more {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 7px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  cursor: pointer;
+}
+
+.more:hover {
+  background: var(--color-bg);
+}
+
+.contentButton {
+  display: block;
+  width: 100%;
+  padding: 14px 0 16px;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.contentButton h3 {
+  margin: 0 0 8px;
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.contentButton p {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.footer {
+  min-height: 28px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.tags {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tags :global(.ant-tag) {
+  margin: 0;
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+}
+
+.footer > button {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  color: var(--color-primary);
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 16px;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

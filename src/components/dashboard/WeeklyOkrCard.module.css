@@ -1,0 +1,163 @@
+.viewAll {
+  padding: 0;
+  border: 0;
+  color: var(--color-primary);
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.objectives {
+  display: grid;
+  gap: 12px;
+  padding: 12px 14px 14px;
+}
+
+.objective {
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 2%);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.objective:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 16%, var(--color-border));
+  box-shadow: 0 4px 12px rgb(15 23 42 / 3%);
+}
+
+.objectiveHeader {
+  display: grid;
+  min-height: 48px;
+  grid-template-columns: 16px 28px minmax(0, 1fr) auto 24px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.objectiveHeader b {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+.objectiveHeader strong {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.objectiveHeader button {
+  border: 0;
+  color: var(--color-text-secondary);
+  background: transparent;
+  cursor: pointer;
+}
+
+.ring,
+.krRing {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.progress {
+  padding: 4px 10px;
+  border-radius: 14px;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-size: 11px;
+}
+
+.keyResults {
+  padding: 6px 15px 9px;
+}
+
+.keyResult {
+  display: grid;
+  min-height: 35px;
+  grid-template-columns: 16px 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  transition: background 140ms ease;
+}
+
+.keyResult:hover {
+  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+}
+
+.completedIcon {
+  color: var(--color-success);
+  font-size: 13px;
+}
+
+.krRing {
+  width: 12px;
+  height: 12px;
+  border-width: 1.5px;
+}
+
+.krRing.not_started {
+  border-color: var(--color-text-tertiary);
+}
+
+.krCode {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
+.krTitle {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status {
+  font-size: 11px;
+}
+
+.status.completed {
+  color: var(--color-text-tertiary);
+}
+
+.status.in_progress {
+  color: var(--color-primary);
+}
+
+.status.not_started {
+  color: var(--color-text-tertiary);
+}
+
+.addKr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  margin-left: 1px;
+  padding: 0;
+  border: 0;
+  color: var(--color-text-tertiary);
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.empty {
+  padding: 42px 20px;
+}
+
+.empty button {
+  padding: 7px 13px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+  border-radius: 7px;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  cursor: pointer;
+}

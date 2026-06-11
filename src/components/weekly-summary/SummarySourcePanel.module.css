@@ -1,0 +1,126 @@
+.stack {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.card :global(.ant-segmented),
+.card :global(.ant-picker) {
+  max-width: 100%;
+}
+
+.card header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.card header > :first-child {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-size: 16px;
+}
+
+.card h2 {
+  margin: 0 0 3px;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 11px;
+}
+
+.range {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.card :global(.ant-segmented-vertical) {
+  width: 100%;
+}
+
+.card :global(.ant-segmented-item-label) {
+  text-align: left;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.metrics div {
+  padding: 12px;
+  border-radius: 9px;
+  background: var(--color-bg);
+}
+
+.metrics strong,
+.metrics span {
+  display: block;
+}
+
+.metrics strong {
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.metrics span {
+  margin-top: 2px;
+  color: var(--color-text-tertiary);
+  font-size: 10px;
+}
+
+.categories {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.categories div,
+.categories span {
+  display: flex;
+  align-items: center;
+}
+
+.categories div {
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.categories span {
+  gap: 7px;
+}
+
+.categories i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.categories b {
+  color: var(--color-text);
+  font-weight: 600;
+}

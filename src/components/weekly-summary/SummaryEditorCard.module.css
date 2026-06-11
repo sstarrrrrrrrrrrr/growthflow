@@ -1,0 +1,97 @@
+.card {
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.card > header {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.card header span {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card h2 {
+  margin: 2px 0 0;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.body {
+  min-height: 560px;
+  padding: 22px;
+}
+
+.body > :global(.ant-empty) {
+  margin-top: 180px;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.period {
+  margin: 10px 0 20px;
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.sections {
+  display: grid;
+  gap: 18px;
+}
+
+.sections section {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.sections h3 {
+  margin: 0 0 10px;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.sections :global(.ant-input) {
+  padding: 12px 14px;
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  line-height: 1.75;
+  resize: none;
+}
+
+@media (max-width: 560px) {
+  .card > header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .body {
+    min-height: 420px;
+    padding: 16px;
+  }
+}

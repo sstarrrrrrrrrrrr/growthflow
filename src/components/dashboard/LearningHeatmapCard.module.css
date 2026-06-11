@@ -1,0 +1,129 @@
+.month {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+.month button {
+  padding: 0;
+  border: 0;
+  color: var(--color-text-secondary);
+  background: transparent;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.content {
+  display: grid;
+  min-height: 142px;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.weekdays,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 17px);
+  gap: 6px;
+}
+
+.weekdays {
+  margin-bottom: 6px;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  text-align: center;
+}
+
+.grid span,
+.legend span {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+}
+
+.grid span {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.grid span:hover {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 3px var(--color-primary);
+  transform: scale(1.12);
+}
+
+.level0 {
+  background: var(--color-bg);
+}
+
+.level1 {
+  background: color-mix(in srgb, var(--color-primary) 25%, var(--color-surface));
+}
+
+.level2 {
+  background: color-mix(in srgb, var(--color-primary) 52%, var(--color-surface));
+}
+
+.level3 {
+  background: color-mix(in srgb, var(--color-primary) 75%, var(--color-surface));
+}
+
+.level4 {
+  background: var(--color-primary);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+}
+
+.legend span {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-radius: 50%;
+}
+
+.duration {
+  padding-left: 24px;
+  border-left: 1px solid var(--color-border);
+}
+
+.duration > span {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
+.duration strong {
+  display: block;
+  margin: 6px 0;
+  color: var(--color-text);
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.duration small {
+  margin-left: 5px;
+  font-size: 11px;
+}
+
+.duration p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+}
+
+.duration b {
+  color: var(--color-success);
+}
+
+.info {
+  display: none;
+}

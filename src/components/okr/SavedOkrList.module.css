@@ -1,0 +1,135 @@
+.section {
+  margin-top: 22px;
+}
+
+.section > header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.section h2 {
+  margin: 0 0 4px;
+  color: var(--color-text);
+  font-size: 17px;
+}
+
+.section header p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.section header > span {
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.item {
+  padding: 18px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.objective {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.objective > span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.objective h3 {
+  margin: 0 0 3px;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.objective p {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 11px;
+}
+
+.objective strong {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+.item :global(.ant-progress) {
+  margin: 12px 0 8px;
+}
+
+.krList {
+  display: grid;
+  gap: 7px;
+  padding: 10px 0;
+}
+
+.krList > div {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 7px;
+}
+
+.krList span,
+.krList b {
+  color: var(--color-text-tertiary);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.krList p {
+  margin: 0;
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.empty {
+  padding: 42px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+@media (max-width: 1000px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

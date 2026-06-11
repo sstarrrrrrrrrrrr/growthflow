@@ -1,0 +1,9 @@
+.banner {
+  margin-bottom: 14px;
+  padding: 11px 14px;
+  border: 1px solid color-mix(in srgb, var(--color-danger) 22%, var(--color-border));
+  border-radius: 9px;
+  color: var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 7%, var(--color-surface));
+  font-size: 12px;
+}

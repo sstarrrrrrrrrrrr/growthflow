@@ -1,0 +1,46 @@
+.page {
+  min-width: 0;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  padding: 8px 0 18px;
+}
+
+.pageHeader > span {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pageHeader h1 {
+  margin: 4px 0 7px;
+  color: var(--color-text);
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.workspace > * {
+  min-width: 0;
+}
+
+@media (max-width: 1050px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}

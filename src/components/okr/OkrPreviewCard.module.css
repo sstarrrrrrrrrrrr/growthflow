@@ -1,0 +1,47 @@
+.card {
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.card > header {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.card header span {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card h2 {
+  margin: 2px 0 0;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.body {
+  min-height: 320px;
+  padding: 20px;
+}
+
+.body :global(.ant-empty) {
+  margin-top: 70px;
+}
+
+.source {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  font-size: 12px;
+}

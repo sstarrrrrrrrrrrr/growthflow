@@ -1,0 +1,36 @@
+.bar {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bar > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bar > :last-child {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    align-items: stretch;
+    flex-direction: column-reverse;
+    padding: 12px 0;
+  }
+
+  .bar > :last-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .bar > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
