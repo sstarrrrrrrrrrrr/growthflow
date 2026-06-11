@@ -6,6 +6,10 @@ GrowthFlow 帮助用户记录学习过程、管理阶段目标，并将自然语
 
 当前版本为纯前端 MVP，使用本地规则引擎完成内容生成，数据通过 Zustand 与 LocalStorage 管理，无需部署后端即可运行。
 
+## Online Demo
+
+[在线体验 GrowthFlow](https://growthflow-pi.vercel.app)
+
 ## 功能展示
 
 ### Dashboard
@@ -133,6 +137,12 @@ npm run build
 ```bash
 npm run preview
 ```
+
+## 部署说明
+
+项目已部署到 [Vercel](https://vercel.com/)。每次向 `main` 分支推送代码后，Vercel 会自动触发构建并重新部署。
+
+国内部分手机网络访问 `vercel.app` 域名时可能不稳定，该情况通常与网络环境或域名访问质量有关，不是 GrowthFlow 项目代码问题。
 
 ## 页面截图
 
